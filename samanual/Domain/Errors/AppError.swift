@@ -35,6 +35,12 @@ public enum AppError: Error, LocalizedError {
     case dataNotFound(entity: String, id: String)
     case dataCorruption(entity: String, details: String)
     case dataValidationFailed(entity: String, field: String, message: String)
+    case userCreationFailed(reason: String)
+    case userUpdateFailed(reason: String)
+    case userDeletionFailed(reason: String)
+    case storageQuotaExceeded
+    case serviceUnavailable
+    case rateLimitExceeded
     
     // MARK: - Network Errors
     case networkError(underlying: Error)
@@ -114,6 +120,18 @@ public enum AppError: Error, LocalizedError {
             return "Data corruption detected for \(entity): \(details)"
         case .dataValidationFailed(let entity, let field, let message):
             return "Data validation failed for \(entity) field '\(field)': \(message)"
+        case .userCreationFailed(let reason):
+            return "Failed to create user: \(reason)"
+        case .userUpdateFailed(let reason):
+            return "Failed to update user: \(reason)"
+        case .userDeletionFailed(let reason):
+            return "Failed to delete user: \(reason)"
+        case .storageQuotaExceeded:
+            return "Storage quota exceeded"
+        case .serviceUnavailable:
+            return "Service is currently unavailable"
+        case .rateLimitExceeded:
+            return "Rate limit exceeded"
             
         // Network Errors
         case .networkError(let underlying):
@@ -172,6 +190,14 @@ public enum AppError: Error, LocalizedError {
             return "Please contact your instructor or administrator"
         case .quotaExceeded:
             return "Please upgrade your subscription or contact support"
+        case .userCreationFailed, .userUpdateFailed, .userDeletionFailed:
+            return "Please try again or contact support if the problem persists"
+        case .storageQuotaExceeded:
+            return "Please free up storage space or upgrade your plan"
+        case .serviceUnavailable:
+            return "Please try again later or contact support"
+        case .rateLimitExceeded:
+            return "Please wait a moment and try again"
         default:
             return "Please try again or contact support if the problem persists"
         }
@@ -192,12 +218,16 @@ public enum AppError: Error, LocalizedError {
             return .network
         case .dataCorruption, .systemError, .configurationError:
             return .system
+        case .userCreationFailed, .userUpdateFailed, .userDeletionFailed:
+            return .data
+        case .storageQuotaExceeded, .serviceUnavailable, .rateLimitExceeded:
+            return .system
         case .businessRuleViolation, .invalidOperation, .quotaExceeded:
             return .business
         case .unknownError:
             return .unknown
-        default:
-            return .unknown
+        case .dataNotFound, .enrollmentFailed, .sessionAlreadyActive, .techniqueNotAccessible, .mediaUploadFailed, .programNotActive:
+            return .data
         }
     }
 }
@@ -210,6 +240,7 @@ public enum ErrorCategory: String, CaseIterable {
     case authorization = "authorization"
     case network = "network"
     case system = "system"
+    case data = "data"
     case business = "business"
     case unknown = "unknown"
     
@@ -219,7 +250,7 @@ public enum ErrorCategory: String, CaseIterable {
     
     public var isRecoverable: Bool {
         switch self {
-        case .notFound, .validation, .authentication, .network:
+        case .notFound, .validation, .authentication, .network, .data:
             return true
         case .authorization, .system, .business, .unknown:
             return false
