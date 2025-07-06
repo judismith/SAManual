@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>com.pjsengineering.samanual</string>
+    
+    <key>NSFaceIDUsageDescription</key>
+    <string>Use Face ID to quickly sign in to your account</string>
+    
+    <key>NSCameraUsageDescription</key>
+    <string>Access to camera is needed to take photos and videos for your training journal and technique documentation.</string>
+    
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Access to photo library is needed to select photos and videos for your training journal and technique documentation.</string>
+    
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Access to microphone is needed to record videos with audio for your training documentation.</string>
+    
+    <key>CFBundleURLTypes</key>
+    <array>
+        <!-- Google Sign-In -->
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>com.googleusercontent.apps.426743003282-ul4armo4to4mplsbo621p7p5i2kp0ndu</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>com.googleusercontent.apps.426743003282-ul4armo4to4mplsbo621p7p5i2kp0ndu</string>
+            </array>
+        </dict>
+        
+        <!-- Apple Sign-In -->
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>AppleSignIn</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>com.pjsengineering.samanual</string>
+            </array>
+        </dict>
+    </array>
+</dict>
+</plist>

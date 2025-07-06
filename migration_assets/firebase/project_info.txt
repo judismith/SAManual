@@ -1,0 +1,6 @@
+PROJECT_ID=shaolin-arts-manual
+BUNDLE_ID=com.pjsengineering.samanual
+CLIENT_ID=426743003282-ul4armo4to4mplsbo621p7p5i2kp0ndu.apps.googleusercontent.com
+API_KEY=AIzaSyCgcepIzakPbfSimNXqXsSD_AkZpMsDDHY
+STORAGE_BUCKET=shaolin-arts-manual.firebasestorage.app
+DATABASE_URL=https://shaolin-arts-manual-default-rtdb.firebaseio.com

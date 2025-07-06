@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct samanualApp: App {
     let persistenceController = PersistenceController.shared
+    
+    init() {
+            FirebaseApp.configure()
+        }
 
     var body: some Scene {
         WindowGroup {

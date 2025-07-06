@@ -6,6 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		27062BD42E1AD86400F1ABE1 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 27062BD32E1AD86400F1ABE1 /* RxBlocking */; };
+		27062BD82E1AD86400F1ABE1 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 27062BD72E1AD86400F1ABE1 /* RxCocoa */; };
+		27062BDC2E1AD86400F1ABE1 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 27062BDB2E1AD86400F1ABE1 /* RxRelay */; };
+		27062BDE2E1AD8B200F1ABE1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 27062BDD2E1AD8B200F1ABE1 /* Kingfisher */; };
+		27062BE12E1AD8DD00F1ABE1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 27062BE02E1AD8DD00F1ABE1 /* Alamofire */; };
+		27062BE52E1AD9C300F1ABE1 /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = 27062BE42E1AD9C300F1ABE1 /* FirebaseAI */; };
+		27062BE72E1AD9C300F1ABE1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 27062BE62E1AD9C300F1ABE1 /* FirebaseAnalytics */; };
+		27062BE92E1AD9C300F1ABE1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 27062BE82E1AD9C300F1ABE1 /* FirebaseAuth */; };
+		27062BEB2E1AD9C300F1ABE1 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 27062BEA2E1AD9C300F1ABE1 /* FirebaseCore */; };
+		27062BED2E1AD9C300F1ABE1 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 27062BEC2E1AD9C300F1ABE1 /* FirebaseCrashlytics */; };
+		27062BEF2E1AD9C300F1ABE1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 27062BEE2E1AD9C300F1ABE1 /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		27463B162E1ACEE100A6950C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +66,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27062BDC2E1AD86400F1ABE1 /* RxRelay in Frameworks */,
+				27062BE12E1AD8DD00F1ABE1 /* Alamofire in Frameworks */,
+				27062BED2E1AD9C300F1ABE1 /* FirebaseCrashlytics in Frameworks */,
+				27062BDE2E1AD8B200F1ABE1 /* Kingfisher in Frameworks */,
+				27062BE52E1AD9C300F1ABE1 /* FirebaseAI in Frameworks */,
+				27062BE72E1AD9C300F1ABE1 /* FirebaseAnalytics in Frameworks */,
+				27062BEF2E1AD9C300F1ABE1 /* FirebaseFirestore in Frameworks */,
+				27062BE92E1AD9C300F1ABE1 /* FirebaseAuth in Frameworks */,
+				27062BEB2E1AD9C300F1ABE1 /* FirebaseCore in Frameworks */,
+				27062BD82E1AD86400F1ABE1 /* RxCocoa in Frameworks */,
+				27062BD42E1AD86400F1ABE1 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +137,17 @@
 			);
 			name = samanual;
 			packageProductDependencies = (
+				27062BD32E1AD86400F1ABE1 /* RxBlocking */,
+				27062BD72E1AD86400F1ABE1 /* RxCocoa */,
+				27062BDB2E1AD86400F1ABE1 /* RxRelay */,
+				27062BDD2E1AD8B200F1ABE1 /* Kingfisher */,
+				27062BE02E1AD8DD00F1ABE1 /* Alamofire */,
+				27062BE42E1AD9C300F1ABE1 /* FirebaseAI */,
+				27062BE62E1AD9C300F1ABE1 /* FirebaseAnalytics */,
+				27062BE82E1AD9C300F1ABE1 /* FirebaseAuth */,
+				27062BEA2E1AD9C300F1ABE1 /* FirebaseCore */,
+				27062BEC2E1AD9C300F1ABE1 /* FirebaseCrashlytics */,
+				27062BEE2E1AD9C300F1ABE1 /* FirebaseFirestore */,
 			);
 			productName = samanual;
 			productReference = 27463B032E1ACEE000A6950C /* samanual.app */;
@@ -195,6 +231,12 @@
 			);
 			mainGroup = 27463AFA2E1ACEE000A6950C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2709829F2E1AD3EB00930788 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				27062BD12E1AD77500F1ABE1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				27062BD22E1AD86400F1ABE1 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				27062BDF2E1AD8DD00F1ABE1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 27463B042E1ACEE000A6950C /* Products */;
 			projectDirPath = "";
@@ -395,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = samanual/samanual.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5EBYNZ9CMR;
@@ -408,6 +451,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/samanual/migration_assets/firebase/functions/node_modules/@unrs/resolver-binding-darwin-arm64",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pjsengineering.samanual;
@@ -423,6 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = samanual/samanual.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5EBYNZ9CMR;
@@ -436,6 +484,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/samanual/migration_assets/firebase/functions/node_modules/@unrs/resolver-binding-darwin-arm64",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pjsengineering.samanual;
@@ -558,6 +610,99 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		27062BD12E1AD77500F1ABE1 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.4.0;
+			};
+		};
+		27062BD22E1AD86400F1ABE1 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.9.0;
+			};
+		};
+		27062BDF2E1AD8DD00F1ABE1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		2709829F2E1AD3EB00930788 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.15.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		27062BD32E1AD86400F1ABE1 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27062BD22E1AD86400F1ABE1 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		27062BD72E1AD86400F1ABE1 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27062BD22E1AD86400F1ABE1 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		27062BDB2E1AD86400F1ABE1 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27062BD22E1AD86400F1ABE1 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		27062BDD2E1AD8B200F1ABE1 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27062BD12E1AD77500F1ABE1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		27062BE02E1AD8DD00F1ABE1 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27062BDF2E1AD8DD00F1ABE1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		27062BE42E1AD9C300F1ABE1 /* FirebaseAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2709829F2E1AD3EB00930788 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAI;
+		};
+		27062BE62E1AD9C300F1ABE1 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2709829F2E1AD3EB00930788 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		27062BE82E1AD9C300F1ABE1 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2709829F2E1AD3EB00930788 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		27062BEA2E1AD9C300F1ABE1 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2709829F2E1AD3EB00930788 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		27062BEC2E1AD9C300F1ABE1 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2709829F2E1AD3EB00930788 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		27062BEE2E1AD9C300F1ABE1 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2709829F2E1AD3EB00930788 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 27463AFB2E1ACEE000A6950C /* Project object */;
 }
